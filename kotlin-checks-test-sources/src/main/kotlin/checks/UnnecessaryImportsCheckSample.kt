@@ -185,3 +185,4 @@ class UnnecessaryImportsCheckSample {
 class ChildClass1A: java.util.Date()
 class ChildClass2A: Timer()
 class ClassInSameFileA
+open class ClassInParentPackage

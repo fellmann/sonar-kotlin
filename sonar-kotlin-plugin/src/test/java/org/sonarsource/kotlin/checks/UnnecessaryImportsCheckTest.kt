@@ -31,4 +31,13 @@ class UnnecessaryImportsCheckTest : CheckTestWithNoSemantics(UnnecessaryImportsC
             this.deps = emptyList()
         }.verify()
     }
+
+    @Test
+    fun `import from same package name with partial semantics`() {
+        KotlinVerifier(check) {
+            this.fileName = "foo/Importer.kt"
+            this.classpath = System.getProperty("java.class.path").split(":")
+            this.deps = emptyList()
+        }.verify()
+    }
 }
